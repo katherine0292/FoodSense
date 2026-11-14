@@ -84,7 +84,7 @@ Moderated tasks with realistic shelf photographs and mixed detection quality. Me
 
 | Path | Contents |
 |---|---|
-| `index.html`, `img/`, `site-src/` | Portfolio page (English and Chinese). Edit copy in `site-src/copy_data.py`, then run `python3 build.py` inside `site-src/`. |
+| `index.html`, `img/`, `site-src/` | Portfolio page (English and Chinese). The live `index.html` now includes later additions (research evidence, paper prototype wall, pointer animation) that `site-src/` does not build, so edit `index.html` directly; `site-src/` rebuilds the earlier version only. |
 | `prototypes/` | Final iOS prototype, early demo, exploration, paper and high-fidelity exports |
 | `docs/` | Brief, case study, proposal, scenarios, research, delivery walkthrough |
 | `assets/` | Persona panel and dinner storyboard |
