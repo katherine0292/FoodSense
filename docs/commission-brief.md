@@ -1,6 +1,8 @@
 # FoodSense commission brief
 
-**Portfolio delivery by Shangcheng (Katherine) Lin**
+**English rendering of the supplied client brief**
+
+**Project delivery** · Shangcheng (Katherine) Lin independently accepted and carried out the FoodSense design commission. The scope and acceptance criteria below follow the supplied brief.
 
 Design a mobile experience that helps budget-conscious international residents in Sydney keep track of groceries, notice ingredients approaching their use-by dates, and make a meal from what is already available. Focus on people living with limited storage or a shared kitchen, and cover three moments: putting groceries away, checking stock on the way home, and cooking dinner.
 
@@ -16,4 +18,4 @@ FoodSense is the phone interface. Javic is the proposed in-fridge component. Des
 | Recipe discovery and cooking | Compare recipes based on available ingredients. View time and required ingredients, follow a recipe, run a step timer and see completion. Demonstrate the voice guidance control as a prototype state. |
 | Design evidence | Include two de-identified interview records, a representative persona, the device and app proposal, use scenarios, paper screens, high-fidelity screens and clickable browser prototypes. |
 
-See [delivery walkthrough](delivery.md) for the screen and prototype that demonstrates each criterion.
+See the [delivery walkthrough](delivery.md) for the screen and prototype that demonstrates each criterion.

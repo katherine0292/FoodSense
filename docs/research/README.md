@@ -1,6 +1,6 @@
 # Research evidence
 
-**FoodSense · Portfolio synthesis by Shangcheng (Katherine) Lin**
+**FoodSense · Research synthesis by Shangcheng (Katherine) Lin**
 
 These two semi-structured interview records informed the design. The English records below paraphrase the source responses and omit unnecessary identifying details. The sample supports hypothesis formation. It does not establish how common these behaviours are.
 

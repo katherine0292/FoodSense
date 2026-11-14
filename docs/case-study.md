@@ -2,7 +2,7 @@
 
 **Independent commissioned AI product and UX design · Shangcheng (Katherine) Lin**
 
-I designed FoodSense around a practical decision at the end of a busy day: what can I cook now with ingredients I should use first? The product brings together shelf visibility, inventory and recipe guidance so that a person can act on a reminder without starting a second search.
+I independently accepted the FoodSense commission. I designed the product around a practical decision at the end of a busy day: what can I cook now with ingredients I should use first? The product brings together shelf visibility, inventory and recipe guidance so that a person can act on a reminder without starting a second search.
 
 ## What informed the design
 
