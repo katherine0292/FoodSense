@@ -4,9 +4,9 @@
 
 FoodSense is an iOS concept for people who share a kitchen, cook on a budget, and lose track of groceries they already have. It connects a proposed in-fridge device, Javic, with a mobile experience for reviewing inventory, seeing what needs attention, and deciding what to cook.
 
-[**Launch the interactive prototype**](https://katherine0292.github.io/foodsense/prototypes/ios/) · [Portfolio walkthrough](https://katherine0292.github.io/foodsense/) · [Design case study](docs/case-study.md)
+[**Design case study**](docs/case-study.md) · [Download the portfolio and prototypes](https://github.com/katherine0292/foodsense/archive/refs/heads/main.zip) · [High-fidelity screens](prototypes/high-fidelity/README.md)
 
-[![FoodSense iOS prototype showing recipe discovery, ingredient review and guided cooking](prototypes/high-fidelity/boards/03-discover-and-cook.jpg)](https://katherine0292.github.io/foodsense/prototypes/ios/)
+[![FoodSense iOS prototype showing recipe discovery, ingredient review and guided cooking](prototypes/high-fidelity/boards/03-discover-and-cook.jpg)](prototypes/high-fidelity/README.md)
 
 ## My work
 
@@ -22,6 +22,8 @@ I took the commissioned product brief and research inputs through problem framin
 The prototype uses a fixed recipe catalogue and simulated device data. It demonstrates how people would inspect and correct system output. It does not establish recognition accuracy, food safety, or waste reduction.
 
 ## Try the main flows
+
+Download and unzip the repository, then open the root `index.html` in a browser and choose **Try the iOS prototype**.
 
 1. **Review a scan.** Choose **Add food → Scan groceries**. Capture the sample scene, change the selection, and confirm the items you want to keep.
 2. **Decide what to cook.** Open **Today → Explore → Find my recipe**. Compare matches or open **Berry pancakes** from Discover. Change the serving count, save the recipe, or add missing ingredients to the shopping list.
@@ -40,8 +42,8 @@ The iOS demo uses a 402 × 874 pt design canvas. Its pantry, favourites, shoppin
 | [Delivery walkthrough](docs/delivery.md) | Where to review each capability and what is simulated |
 | [Paper prototype](prototypes/paper/README.md) | Ten original sketches and a readable PDF walkthrough |
 | [iOS design boards](prototypes/high-fidelity/README.md) | Four flow boards and all 25 high-fidelity screens |
-| [Early browser demo](https://katherine0292.github.io/foodsense/prototypes/early-demo/) | Original inventory, Javic, and egg fried rice walkthrough |
-| [Interaction exploration](https://katherine0292.github.io/foodsense/prototypes/exploration/) | Alternative browser layout for browsing inventory and recipes |
+| [Early browser demo](prototypes/early-demo/index.html) | Original inventory, Javic, and egg fried rice walkthrough |
+| [Interaction exploration](prototypes/exploration/index.html) | Alternative browser layout for browsing inventory and recipes |
 | [Final iOS prototype source](prototypes/ios/index.html) | Responsive, clickable and animated iOS flows |
 
-To run locally, open `index.html` from the repository root in a browser, or serve the folder with `python3 -m http.server 8000` and open `http://localhost:8000`.
+To run with a local server, serve the folder with `python3 -m http.server 8000` and open `http://localhost:8000`.
