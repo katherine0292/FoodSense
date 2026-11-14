@@ -1,55 +1,92 @@
 # FoodSense
 
-**Independent client commission · Shangcheng (Katherine) Lin**
+**iOS UI/UX design for an AI-assisted fridge inventory and cooking app · Independent client commission · Katherine Lin**
 
-I independently accepted the FoodSense design commission and developed it from the supplied brief and research inputs into a working browser prototype and a 25-screen iOS design. I owned the product definition, the interaction and visual design, and the prototype delivery.
+[Portfolio page](index.html) · [Final iOS prototype](prototypes/ios/index.html) · [Delivery walkthrough](docs/delivery.md) · [Design case study](docs/case-study.md)
 
-FoodSense helps budget-conscious international residents in Sydney look inside a shared fridge, see which groceries to use first, and decide what to cook. The iOS concept pairs with **Javic**, a proposed in-fridge device that supplies shelf images and suggests items for the cook to review.
+![FoodSense. Dinner is already in your fridge. See what you have. Cook what needs using.](img/poster-wide.jpg)
 
-[Commission brief in English](docs/commission-brief.md) · [Download project and prototypes](https://github.com/katherine0292/foodsense/archive/refs/heads/main.zip) · [Delivery walkthrough](docs/delivery.md)
+## Summary
 
-![Six FoodSense iOS screens showing Discover, recipe matching, recipe detail, guided cooking, a timer and meal completion](prototypes/high-fidelity/boards/03-discover-and-cook.jpg)
+FoodSense helps budget-conscious international residents in Sydney see what is in a shared fridge, know what to use first and choose a meal they can cook. The concept pairs an iPhone app with Javic, a proposed in-fridge camera that supplies shelf images and suggests items for the cook to review.
 
-## What the client commissioned
+| | |
+|---|---|
+| **Role** | UI/UX designer: interaction design, visual design, prototyping |
+| **Client input** | Commission brief and two interview records |
+| **Users** | Residents with limited storage, a fixed budget and a shared fridge |
+| **Platform** | iOS, iPhone 16 Pro canvas (402 × 874 pt) |
+| **Deliverables** | Persona and scenario · 10 paper screens · 25 iOS screens in four flows · 3 clickable prototypes |
+| **AI scope** | Interface design for a recognition feature: how detections are shown, reviewed and corrected. The device and model are proposal scope and were not built. |
 
-The brief asked for a mobile experience connected to an in-fridge device, focused on three moments: **putting groceries away**, **checking what is available on the way home**, and **cooking dinner**. The deliverables were two interview records, a representative persona, a device and app proposal with use scenarios, paper and high-fidelity iOS designs, and clickable browser demos. It allowed sample data for device connections, detections and recommendations.
+## Design problem
 
-I focused the scope on a decision the cook could complete: confirm what is in the fridge, identify what needs using, and choose a meal they can make with it. That gave each feature a role in the same journey.
+How can someone go from “what is in there?” to “I know what I am cooking” without logging every item? The brief named three moments: putting groceries away, checking stock on the way home, and cooking dinner. I narrowed the scope to one decision the cook can finish: confirm what is in the fridge, identify what to use first, choose a feasible meal.
 
-## How the research shaped the product
+## Research to design
 
-| Evidence from the supplied research | Design response |
-| --- | --- |
-| A resident who hosts regularly said leftover ingredients often disappear behind other groceries in a shared fridge. | Show shelf views and surface **Use first** on Today so the cook can find items without searching the whole fridge. |
-| A frequent solo cook stopped using inventory apps after a few days because entering use-by dates took too much effort. | Present detected groceries as a batch the cook can confirm or skip. Keep manual entry available for missed or uncertain items. |
-| Both accounts showed how hard it is to decide what to make when plans change or ingredients are out of sight. | Show cooking time, ingredient coverage and missing items before the cook commits to a recipe. Connect near-date ingredients to relevant dishes. |
-| The composite persona cooks for one most weekdays with limited time and storage. | Let the cook adjust servings, follow one step at a time, and confirm which ingredients were fully used before removing them from inventory. |
+Both interviews were supplied with the brief. I synthesised them into a composite persona (Wei Lin) and used it to set what each screen must do. Two records support hypotheses only, not prevalence.
 
-The two interviews provided qualitative design inputs. [Read the interview records and Wei Lin persona](docs/research/README.md) or [follow Maya's dinner scenario](docs/scenarios.md).
+| Observation | Design response |
+|---|---|
+| Leftovers disappear behind other groceries in a shared fridge. | Shelf views, and a **Use first** list on Today. |
+| Manual date entry is abandoned within days. | Detected groceries arrive as a batch to confirm or skip. Manual entry stays as the fallback. |
+| Deciding what to cook is hard when plans change and food is out of sight. | Recipe cards show time, ingredient coverage and what is missing before the cook commits. |
+| One cook, limited time and space. | Adjustable servings, one step at a time, and a check on what was used up before it leaves the pantry. |
 
-## How FoodSense and Javic work together
+## Designing for an uncertain detection
 
-1. **Observe.** The proposed Javic camera captures a shelf image and suggests ingredients. The app lets the cook inspect the snapshot and the suggested items.
-2. **Confirm.** Only the items the cook selects are added to inventory. Manual entry and editing cover missing items, quantities and dates.
-3. **Prioritise.** FoodSense shows recorded use-by dates and groups near-date foods in **Use first**. The electronic nose in the proposal would supply an experimental shelf-level cue for the cook to investigate.
-4. **Decide and cook.** The recipe match compares available ingredients and uses near-date items as a ranking signal. The recipe detail shows what is missing, followed by step-by-step instructions and a timer. The cook confirms any inventory removals at the end.
+The interface treats recognition as a draft the cook can verify, not as a fact.
 
-The browser prototype uses simulated shelf data and detections, and ranks a fixed recipe catalogue in the browser. Its timers, inventory, favourites and shopping list work in the demo. The electronic nose, live hardware and recognition model are proposal scope. The early browser demo shows the voice guidance toggle as an interface state. [System design, recovery paths and pilot measures](docs/product-proposal.md)
+| Situation | Interface behaviour |
+|---|---|
+| Detection is uncertain, hidden or duplicated | Shown as a draft to tick or skip. Nothing is added automatically. |
+| Camera cannot see quantity, date, owner or allergens | Fields stay editable. Manual entry is always available. |
+| Recorded date and a sensor cue disagree | Shown separately. The date is the date. The cue only prompts a look and never states that food is safe. |
+| Shelf snapshot is old | Labelled as old. A later scan never overwrites an item the cook edited. |
+| Device offline or missing | Manual entry works without it. |
 
-## Try the prototypes
+The [product proposal](docs/product-proposal.md) specifies the system behaviour and boundaries.
 
-[Download the repository ZIP](https://github.com/katherine0292/foodsense/archive/refs/heads/main.zip), extract it, and open the HTML file listed below in a browser. The GitHub file view shows the source.
+## Key flows
 
-| Prototype | Open locally | What to try |
-| --- | --- | --- |
-| **Final iOS demo** | [prototypes/ios/index.html](prototypes/ios/index.html) | Review a sample scan, filter the pantry, match a recipe and cook berry pancakes. The screen index opens all 25 iOS states. |
-| **Early browser demo** | [prototypes/early-demo/index.html](prototypes/early-demo/index.html) | Inspect Javic's shelves, look through the alerts and follow the egg fried rice flow with its voice guidance control. |
-| **Interaction exploration** | [prototypes/exploration/index.html](prototypes/exploration/index.html) | Compare an alternative layout for inventory, device and recipe browsing. |
+| Flow | Screens | Where to look |
+|---|---|---|
+| Start and pantry | Welcome, Today, Use first, Pantry, Ingredient | [Board 01](prototypes/high-fidelity/boards/01-start-and-pantry.jpg) |
+| Add and scan | Add food, Manual entry, Scan, Review food, My fridge, Pantry updated | [Board 02](prototypes/high-fidelity/boards/02-add-and-scan.jpg) |
+| Discover and cook | Discover, Recipe match, Recipe detail, Steps, Timer, Meal complete | [Board 03](prototypes/high-fidelity/boards/03-discover-and-cook.jpg) |
+| Cookbook and profile | Saved recipes, Shopping list, Preferences, Edit profile | [Board 04](prototypes/high-fidelity/boards/04-cookbook-and-you.jpg) |
 
-To walk through the final demo, start with **Add food → Scan groceries → Review food**, then open **Today → Use first** to compare spinach approaching its date with yoghurt past its recorded date. Go to **Today → Explore → Find my recipe** to compare matches, check what is missing and start the step timer.
+## Deliverables
 
-## Delivery and evaluation
+| Deliverable | Contents |
+|---|---|
+| [Final iOS prototype](prototypes/ios/index.html) | Review a sample scan, filter the pantry, match a recipe and cook berry pancakes. The screen index opens all 25 states. |
+| [Early browser demo](prototypes/early-demo/index.html) | Javic shelves, alerts and the egg fried rice flow with a voice guidance control. |
+| [Interaction exploration](prototypes/exploration/index.html) | An alternative layout for inventory, device and recipe browsing. |
+| [Paper prototype](prototypes/paper/README.md) | Ten sketched screens from Home to Meal complete. |
+| [iOS design boards](prototypes/high-fidelity/README.md) | 25 screens at 3× and four flow boards. |
+| [Research](docs/research/README.md), [scenarios](docs/scenarios.md), [commission brief](docs/commission-brief.md) | Interview records, persona, dinner scenario, scope and acceptance criteria. |
 
-The project includes [ten paper screens](prototypes/paper/README.md), [25 iOS exports and four flow boards](prototypes/high-fidelity/README.md), and the three interactive versions above. The [delivery walkthrough](docs/delivery.md) maps the brief's requirements to specific screens and demo paths. The [design case study](docs/case-study.md) documents the design evolution and my rationale.
+To try the main flow, open the final prototype and go to **Add food → Scan groceries → Review food**, then **Today → Use first**, then **Today → Explore → Find my recipe**.
 
-For a pilot, I would test whether people notice and correct incorrect detections, how long it takes to confirm groceries or choose a feasible meal, and whether they understand why a recipe was suggested. Comparing these behaviours with manual entry would inform whether to expand the recognition and hardware scope. Waste and cost reduction remain hypotheses to measure.
+## Evaluation plan
+
+Moderated tasks with realistic shelf photographs and mixed detection quality. Measure whether people notice and correct wrong detections, time to confirm groceries or choose a feasible meal against manual entry, and whether they understand why a recipe was suggested. A small in-home pilot would then examine inventory upkeep and how often a suggested meal uses a near-date item. Waste and cost reduction are hypotheses until measured.
+
+## Scope and limits
+
+- **Working in the prototypes:** timers, pantry add, edit and remove, shopping list, favourites, step navigation (all in the browser).
+- **Simulated:** Javic output and detections, recipe ranking from a fixed catalogue, the voice guidance switch.
+- **Not built:** the recognition model, the electronic nose, live device sync.
+
+## Repository
+
+| Path | Contents |
+|---|---|
+| `index.html`, `img/`, `site-src/` | Portfolio page (English and Chinese). Edit copy in `site-src/copy_data.py`, then run `python3 build.py` inside `site-src/`. |
+| `prototypes/` | Final iOS prototype, early demo, exploration, paper and high-fidelity exports |
+| `docs/` | Brief, case study, proposal, scenarios, research, delivery walkthrough |
+| `assets/` | Persona panel and dinner storyboard |
+
+Open any HTML file directly in a browser. Everything runs locally.
