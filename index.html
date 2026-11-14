@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="FoodSense, a commissioned AI product and iOS UX design case study by Shangcheng (Katherine) Lin.">
+<title>FoodSense | Shangcheng Lin</title>
+<style>
+:root{color-scheme:light;--paper:#f5f2ea;--ink:#242920;--muted:#586052;--line:#d8d8cb;--green:#304734;--serif:ui-serif,New York,Baskerville,Georgia,serif;--sans:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.6 var(--sans)}main,header,footer{width:min(calc(100% - 64px),1184px);margin:auto}header{display:flex;justify-content:space-between;align-items:center;padding:21px 0;border-bottom:1px solid var(--line);gap:12px}a{color:var(--green);text-underline-offset:4px}a:focus-visible{outline:2px solid var(--green);outline-offset:4px}.name{font-weight:730;text-decoration:none}.source{font-size:14px}.hero{display:grid;grid-template-columns:1fr 1.04fr;align-items:center;gap:clamp(22px,5vw,75px);padding:clamp(36px,6vw,82px) 0}.label{font-size:11px;letter-spacing:.11em;font-weight:750;text-transform:uppercase;color:var(--muted)}h1,h2,h3,p,figure{margin:0}h1,h2,h3{font:400 48px/1.02 var(--serif);letter-spacing:-.045em}h1{font-size:clamp(65px,9vw,124px);margin:8px 0 19px}.lede{font:400 clamp(24px,3vw,35px)/1.13 var(--serif);letter-spacing:-.025em;max-width:440px}.body{color:var(--muted);margin:18px 0 0;max-width:530px}.hero-visual{display:block;background:#e9eddc;border-radius:29px;overflow:hidden;box-shadow:0 17px 42px #35382214}.hero-visual img{display:block;width:100%;height:auto}.actions{display:flex;gap:12px 19px;align-items:center;flex-wrap:wrap;margin-top:23px}.button{display:inline-flex;align-items:center;justify-content:center;min-height:46px;gap:13px;padding:0 18px;background:var(--green);color:white;text-decoration:none;border-radius:30px;font-size:14px;font-weight:700}.button:hover{background:#455d43}.text-link{font-size:14px;font-weight:670}.section{border-top:1px solid var(--line);padding:35px 0 45px}.section h2{font-size:clamp(36px,4.4vw,56px);margin-bottom:14px}.decisions{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin:25px 0 0}.decisions article{border-top:1px solid var(--line);padding-top:15px}.decisions h3{font-size:28px;margin-bottom:8px}.decisions p,.archive p{font-size:15px;color:var(--muted)}.archive{display:grid;grid-template-columns:repeat(2,1fr);gap:0 26px;margin-top:12px}.archive a{display:block;padding:16px 0;border-top:1px solid var(--line);text-decoration:none}.archive a:hover strong{text-decoration:underline}.archive strong{display:block}.archive small{display:block;margin-top:3px;color:var(--muted);font-size:14px}.boards{display:block;margin:24px 0 0}.boards img{display:block;width:100%;border-radius:14px}footer{border-top:1px solid var(--line);padding:19px 0 32px;display:flex;gap:14px;justify-content:space-between;color:var(--muted);font-size:13px}
+@media(max-width:780px){main,header,footer{width:calc(100% - 36px)}.hero{grid-template-columns:1fr;gap:22px}.hero-visual{max-width:550px}.decisions{grid-template-columns:1fr;gap:15px}.archive{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><a class="name" href="https://github.com/katherine0292">Shangcheng (Katherine) Lin</a><a class="source" href="https://github.com/katherine0292/foodsense">View on GitHub ↗</a></header>
+<main>
+<section class="hero" aria-labelledby="title">
+<div>
+<p class="label">Independent commissioned design · iOS</p>
+<h1 id="title">FoodSense</h1>
+<p class="lede">Make dinner with what is already in the fridge.</p>
+<p class="body">An AI-assisted kitchen concept for residents who share storage and cook on a budget. FoodSense makes it easier to confirm groceries, see what to use first, and choose a meal that fits.</p>
+<div class="actions"><a class="button" href="prototypes/ios/">Try the iOS prototype <span aria-hidden="true">↗</span></a><a class="text-link" href="#design">Read the case study ↓</a></div>
+</div>
+<a class="hero-visual" href="prototypes/ios/" aria-label="Launch the FoodSense iOS prototype"><img width="1160" height="900" src="assets/portfolio-cover.jpg" alt="Three iOS screens showing inventory priorities, recipe matching and guided cooking"></a>
+</section>
+<section class="section" id="design" aria-labelledby="design-title">
+<h2 id="design-title">From a crowded fridge to dinner</h2>
+<p class="body">The research inputs described food hidden behind other groceries and meal plans that changed under time pressure. I turned those observations into three decisions about where assistance matters.</p>
+<div class="decisions">
+<article><h3>Review before saving</h3><p>A sample scan proposes items. The cook chooses what to keep, and can add anything the scan misses.</p></article>
+<article><h3>Make freshness actionable</h3><p>Use first surfaces near-date ingredients alongside specific meals that can use them.</p></article>
+<article><h3>Show why a meal fits</h3><p>Match cards expose ingredient coverage and time. Recipe details show missing items before cooking begins.</p></article>
+</div>
+<p class="body">This prototype uses simulated fridge data and a fixed recipe catalogue. The hardware proposal describes the questions to resolve before a pilot.</p>
+<a class="boards" href="prototypes/high-fidelity/overview.jpg"><img width="2700" height="1166" loading="lazy" src="prototypes/high-fidelity/boards/03-discover-and-cook.jpg" alt="Six iOS screens from Discover through meal completion"></a>
+</section>
+<section class="section" aria-labelledby="archive-title">
+<h2 id="archive-title">Design archive</h2>
+<div class="archive">
+<a href="https://github.com/katherine0292/foodsense/blob/main/docs/case-study.md"><strong>Written case study ↗</strong><small>My role, design decisions and evaluation plan</small></a>
+<a href="https://github.com/katherine0292/foodsense/tree/main/docs/research"><strong>Research and persona ↗</strong><small>Two anonymised interviews and the Wei Lin persona</small></a>
+<a href="prototypes/paper/paper-prototype.pdf"><strong>Paper prototype · PDF ↗</strong><small>Ten sketches with walkthrough notes</small></a>
+<a href="prototypes/high-fidelity/overview.jpg"><strong>High-fidelity overview ↗</strong><small>25 iOS screens, including empty and completion states</small></a>
+<a href="prototypes/early-demo/"><strong>Early browser demo ↗</strong><small>Javic shelf views and the egg fried rice flow</small></a>
+<a href="prototypes/exploration/"><strong>Interaction exploration ↗</strong><small>An alternative browser layout for inventory and recipes</small></a>
+</div>
+</section>
+</main>
+<footer><span>Independent commissioned design by Shangcheng (Katherine) Lin</span><a href="#title">Back to top ↑</a></footer>
+</body>
+</html>
