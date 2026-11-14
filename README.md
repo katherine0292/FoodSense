@@ -4,7 +4,7 @@
 
 [Portfolio page](index.html) · [Final iOS prototype](prototypes/ios/index.html) · [Delivery walkthrough](docs/delivery.md) · [Design case study](docs/case-study.md)
 
-![FoodSense. Dinner is already in your fridge. See what you have. Cook what needs using.](img/poster-wide.jpg)
+![FoodSense: groceries flow from a mint-green fridge into a freshly cooked meal and the iPhone app.](img/foodsense-creative-poster.png)
 
 ## Summary
 
@@ -90,3 +90,11 @@ Moderated tasks with realistic shelf photographs and mixed detection quality. Me
 | `assets/` | Persona panel and dinner storyboard |
 
 Open any HTML file directly in a browser. Everything runs locally.
+
+## Prototype walkthrough
+
+[Watch the complete walkthrough at the end of the portfolio](index.html#c-video) · [Download the MP4](media/foodsense-walkthrough.mp4)
+
+A continuous recording of the clickable high-fidelity prototype, framed to the phone only. Follow pantry and freshness checks, grocery scanning and manual entry, fridge shelves, recipe matching, saved recipes and shopping, guided cooking with the timer, and profile preferences. Tap highlights make the actions visible.
+
+The recording uses the prototype's sample data and simulated device output.
