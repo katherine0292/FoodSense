@@ -50,7 +50,7 @@ svg.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;
 .eyebrow{font-size:10px;font-weight:750;letter-spacing:.15em;text-transform:uppercase;color:var(--moss)}
 .card{border:1px solid var(--line);border-radius:24px;background:var(--paper);overflow:hidden}
 .app-shell{display:grid;grid-template-columns:224px minmax(0,1fr);min-height:100dvh;max-width:1760px;margin:auto}
-.sidebar{position:sticky;top:0;height:100dvh;border-right:1px solid var(--line);padding:32px 20px 20px;display:flex;flex-direction:column;background:#fbfaf5;z-index:3}
+.sidebar{position:sticky;top:0;height:100dvh;border-right:1px solid var(--line);padding:52px 20px 20px;display:flex;flex-direction:column;background:#fbfaf5;z-index:3}
 .brand{display:flex;align-items:center;gap:10px;text-align:left;width:max-content;font-weight:800;font-size:23px;letter-spacing:-.055em}
 .brand-mark{width:36px;height:36px;display:grid;place-items:center;background:var(--dark);color:#fff;border-radius:12px;box-shadow:inset 0 1px #ffffff26}
 .sidebar .brand{margin:0 0 51px 9px}
@@ -93,7 +93,7 @@ svg.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;
 .hero-copy .eyebrow .icon{width:14px;height:14px}
 .hero h2{font-size:clamp(44px,5.2vw,77px);color:#22271e}
 .hero h2 em{font-weight:400;color:#45553b}
-.hero p{margin:14px 0 21px;color:#4f4c53;max-width:260px;font-size:13px}
+.hero p{margin:14px 0 21px;color:#4f4c53;font-size:13px}
 .hero .btn{padding-inline:17px}
 .hero-key{position:absolute;bottom:16px;right:18px;background:#fffdf7db;border:1px solid #ffffff9c;backdrop-filter:blur(10px);padding:8px 12px;border-radius:999px;display:flex;align-items:center;gap:7px;color:#32402e;font-size:11px;font-weight:750}
 .dashboard{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.06fr);gap:24px;margin-top:26px;align-items:start}
@@ -108,7 +108,7 @@ svg.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;
 .food-row>.icon{width:15px;height:15px;color:#7a8073}
 .food-row .status{margin-left:auto}
 .food-info{min-width:0;flex:1}
-.food-info strong,.food-info small{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.food-info strong,.food-info small{display:block;overflow-wrap:anywhere}
 .food-info strong{font-size:13px;font-weight:750}
 .food-info small{font-size:11px;color:var(--muted);margin-top:1px}
 .food-pic{width:49px;height:46px;border-radius:12px;background:#f6f3ec;overflow:hidden;display:grid;place-items:center;color:#65795c;flex:none}
@@ -154,7 +154,7 @@ svg.icon{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.65;
 .ingredient-tile{display:flex;align-items:center;justify-content:center;flex-direction:column;border-radius:14px;background:#fffdf7;border:1px solid #ece8df;min-width:0;padding:5px 3px 7px;gap:2px}
 .ingredient-tile:hover{transform:translateY(-3px);border-color:#b9c5ad}
 .ingredient-tile .food-pic{background:transparent;width:100%;height:53px;border-radius:0}
-.ingredient-tile strong{font-size:10px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ingredient-tile strong{font-size:11px;max-width:100%;overflow-wrap:anywhere;line-height:1.3;text-align:center}
 .ingredient-tile .icon{width:17px;height:17px}
 .inner-title{font:400 29px/.95 var(--serif);letter-spacing:-.045em;margin-bottom:12px}
 .segmented{display:flex;gap:4px;background:#efede5;padding:4px;border-radius:100px;width:max-content;max-width:100%;margin-bottom:16px}
@@ -299,6 +299,7 @@ body:has(dialog[open]){overflow:hidden}
   html{scrollbar-gutter:auto}
   .app-shell{display:block}
   .sidebar{display:none}
+  body{padding-top:40px}
   .main{max-width:650px;padding:13px 18px calc(82px + env(safe-area-inset-bottom,0px))}
   .topline{margin-bottom:18px}
   .crumb{display:none}
@@ -328,7 +329,7 @@ body:has(dialog[open]){overflow:hidden}
   .hero-key{bottom:auto;top:10px;right:10px;font-size:10px;padding:6px 9px}
   .dashboard{grid-template-columns:1fr;gap:20px;margin-top:20px}
   .section-title h2{font-size:31px}
-  .pantry-layout,.two-col{grid-template-columns:1fr}
+  .pantry-layout,.two-col{grid-template-columns:minmax(0,1fr)}
   .ingredient-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
   .recipe-grid{gap:8px}
   .recipe-grid .recipe-photo{height:120px}
@@ -920,6 +921,6 @@ document.addEventListener('pointercancel',()=>{swipeStart=undefined;});
 window.addEventListener('popstate',()=>go(routeFromHash(),false,false));
 render();
 </script>
-<a href="https://github.com/katherine0292/foodsense#readme" style="position:fixed;z-index:999;top:10px;left:10px;border-radius:16px;padding:6px 10px;background:#fff;color:#25271f;font:600 12px system-ui">Project README</a>
+<a href="https://github.com/katherine0292/foodsense#readme" style="position:absolute;z-index:999;top:10px;left:10px;border-radius:16px;padding:6px 10px;background:#fff;color:#25271f;font:600 12px system-ui">Project README</a>
 </body>
 </html>
