@@ -26,7 +26,7 @@ img{display:block;width:100%;object-fit:cover}
 .intro{width:100%;max-width:330px}
 .intro h2{font-size:clamp(46px,6.5vw,106px);line-height:.86;margin:18px 0 24px;letter-spacing:-.066em}
 .intro h2 em{color:#4c6243;font-weight:400}
-.intro p{max-width:240px;color:var(--sub);line-height:1.6}
+.intro p{max-width:none;color:var(--sub);line-height:1.6}
 .guide{width:100%;max-width:205px;align-self:center}
 .guide h2{font-size:29px;margin:10px 0 18px}
 .route{display:flex;width:100%;align-items:center;gap:11px;min-height:44px;border-top:1px solid var(--line);font-size:12px;font-weight:650}
@@ -299,7 +299,7 @@ body .guide{display:block}.guide h2{margin-bottom:13px}.guide details{margin-top
 .pantry-filter{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;margin-top:15px}
 .pantry-filter .btn{min-height:42px}
 .guide h2{margin-top:0}.route i{display:none}
-@media(max-width:620px){.shell:before{content:none}.mast{display:flex;padding:0 8px 7px;margin-bottom:6px}.mast .brand{font-size:12px}.mast .caption{letter-spacing:.08em}}
+@media(max-width:620px){.shell:before{content:none}.mast{display:flex;flex-wrap:wrap;gap:6px 12px;padding:0 8px 7px;margin-bottom:6px}.mast .brand{font-size:12px;white-space:nowrap}.mast .caption{letter-spacing:.08em;white-space:nowrap}}
 </style>
 </head>
 <body>
